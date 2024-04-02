@@ -3,10 +3,9 @@ import PropTypes from "prop-types";
 
 import { useState } from "react";
 
-function ButtonAnswer({ index }) {
+function ButtonAnswer({ index, isCorrect, setCorrect }) {
   const questionData = quiz[index];
 
-  const [isCorrect, setCorrect] = useState(false);
   const handleChoice = (e) => {
     //     console.log(indexButton);
     if (questionData.correctAnswer === e.target.value) {

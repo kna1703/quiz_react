@@ -5,6 +5,7 @@ import { useState } from "react";
 
 function App() {
   const [index, setIndex] = useState(0);
+  const [isCorrect, setCorrect] = useState(false);
 
   const questionData = quiz[index];
 
@@ -32,7 +33,12 @@ function App() {
         <button>{questionData.choices[2]}</button>
         <button>{questionData.choices[3]}</button> */}
       </div>
-      <ButtonAnswer index={index} setIndex={setIndex} />
+      <ButtonAnswer
+        index={index}
+        setIndex={setIndex}
+        isCorrect={isCorrect}
+        setCorrect={setCorrect}
+      />
     </>
   );
 }
