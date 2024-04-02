@@ -2,15 +2,20 @@
   border: solid white;
   width: 50%;
   text-align: center;
-  margin: 5vh auto 8vh auto;
+  margin: 2vh auto 4vh auto;
 }
 
 h2 {
   font-size: 4vh;
 }
 
-@media only screen and (min-width: 430px) {
+@media only screen and (max-width: 430px) {
   .box {
     margin: 0 auto;
+    width: 70%;
+  }
+
+  h2 {
+    font-size: 2vh;
   }
 }
