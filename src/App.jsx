@@ -1,3 +1,4 @@
+import Result from "./components/Result/Result";
 import "./question";
 import { useState } from "react";
 import "./App.css";
@@ -11,7 +12,10 @@ function App() {
 
   return (
     <>
-    <Question index={index} setIndex={setIndex}/>
+
+      <Question index={index} setIndex={setIndex}/>
+      
+      <Result />
     </>
   );
 }
