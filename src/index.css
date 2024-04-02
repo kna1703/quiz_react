@@ -10,24 +10,16 @@
 }
 
 :root {
-  h1,
-  h2,
-  h3,
-  h4,
-  p {
-    font-family: "PaytoneOne-Regular";
-    color: white;
-    text-align: center;
-  }
-  
+--goodanswer:#00B41C;
+--wronganswer:#FA87DB;
+--answer:#3585CE;
 }
 
-* {
-  margin: 0;
-  padding: 0;
+h1, h2, h3, h4, p, button {
+  font-family: 'PaytoneOne-Regular';
+  color: white;
+
 }
-
-
 
 body {
   margin: 0;
@@ -45,3 +37,4 @@ body {
   border-radius: 1em;
   box-shadow: 0 0 45px rgba(255, 255, 255, 0.75);
 }
+

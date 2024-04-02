@@ -4,7 +4,13 @@ import "./ButtonAnswer.css";
 import { useState } from "react";
 
 
-function ButtonAnswer({ index, isCorrect, setCorrect }) {
+function ButtonAnswer({
+  index,
+  isCorrect,
+  setCorrect,
+  elementVisible,
+  setElementVisible,
+}) {
   const questionData = quiz[index];
   const [buttonsDisabled, setButtonsDisabled] = useState(false);
 
@@ -21,49 +27,52 @@ function ButtonAnswer({ index, isCorrect, setCorrect }) {
       e.target.classList.add("red")
   
     }
+    setElementVisible(true);
+    console.log(elementVisible);
     setButtonsDisabled(true)
   };
 
 
   return (
     <>
-      <button
-        value={questionData.choices[0]}
-        onClick={handleChoice}
-        className={`btn-answer`}
-        disabled={buttonsDisabled}      
-      >
-        {" "}
-        {questionData.choices[0]}{" "}
-      </button>
-      <button
-        value={questionData.choices[1]}
-        onClick={handleChoice}
-        className={`btn-answer`}
-        disabled={buttonsDisabled}
-      >
-        
-        {" "}
-        {questionData.choices[1]}
-      </button>
-      <button
-        value={questionData.choices[2]}
-        onClick={handleChoice}
-        className={`btn-answer`}
-        disabled={buttonsDisabled}  
-      >
-        {" "}
-        {questionData.choices[2]}
-      </button>
-      <button
-        value={questionData.choices[3]}
-        onClick={handleChoice}
-        className={`btn-answer`} 
-        disabled={buttonsDisabled}  
-      >
-        {" "}
-        {questionData.choices[3]}
-      </button>
+      <div className="bouton-grid">
+        <button
+          value={questionData.choices[0]}
+          onClick={handleChoice}
+          className="btn-answer"
+          disabled={buttonsDisabled} 
+        >
+          {" "}
+          {questionData.choices[0]}{" "}
+        </button>
+        <button
+          value={questionData.choices[1]}
+          onClick={handleChoice}
+          className="btn-answer"
+          disabled={buttonsDisabled} 
+        >
+          {" "}
+          {questionData.choices[1]}
+        </button>
+        <button
+          value={questionData.choices[2]}
+          onClick={handleChoice}
+          className="btn-answer"
+          disabled={buttonsDisabled} 
+        >
+          {" "}
+          {questionData.choices[2]}
+        </button>
+        <button
+          value={questionData.choices[3]}
+          onClick={handleChoice}
+          className="btn-answer"
+          disabled={buttonsDisabled} 
+        >
+          {" "}
+          {questionData.choices[3]}
+        </button>
+      </div>
     </>
   );
 }

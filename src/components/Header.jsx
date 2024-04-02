@@ -4,9 +4,9 @@ import "./Header.css";
 
 function Header () {
     return (
-        <div className="header">
+        <div className="Header">
         <p className="Quiz">Quiz</p>
-        <span>?</span>
+        <p><span>?</span></p>
         </div>
     )
 }
