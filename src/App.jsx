@@ -9,6 +9,7 @@ function App() {
   const [isCorrect, setCorrect] = useState(false);
   const [elementVisible, setElementVisible] = useState(false);
   const [buttonsDisabled, setButtonsDisabled] = useState(false);
+  const [score, setScore] = useState(0);
 
   return (
     <>
@@ -24,6 +25,8 @@ function App() {
         setElementVisible={setElementVisible}
         buttonsDisabled={buttonsDisabled}
         setButtonsDisabled={setButtonsDisabled}
+        score={score}
+        setScore={setScore}
       />
       <Result
         isCorrect={isCorrect}
@@ -33,6 +36,8 @@ function App() {
         setIndex={setIndex}
         buttonsDisabled={buttonsDisabled}
         setButtonsDisabled={setButtonsDisabled}
+        score={score}
+        setScore={setScore}
       />
     </>
   );

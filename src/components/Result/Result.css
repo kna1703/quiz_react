@@ -38,6 +38,10 @@
   padding-bottom: 0.4rem;
 }
 
+p {
+  text-align: center;
+}
+
 @media only screen and (max-width: 430px) {
   .Next {
     width: 100px;
