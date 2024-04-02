@@ -35,3 +35,9 @@
   font-size: 1.5rem;
   font-family: PaytoneOne-Regular;
 }
+
+@media only screen and (max-width: 430px) {
+  .Next {
+    width: 70px;
+  }
+}
