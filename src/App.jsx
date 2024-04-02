@@ -7,27 +7,13 @@ import Result from "./components/Result/Result";
 function App() {
   const [index, setIndex] = useState(0);
   const [isCorrect, setCorrect] = useState(false);
-
+  const [elementVisible, setElementVisible] = useState(false);
   const questionData = quiz[index];
-
-  const handleNext = () => {
-    setIndex((index) => index + 1);
-  };
-
-  const handleBefore = () => {
-    setIndex((index) => index - 1);
-  };
 
   return (
     <>
       <div>
         <p>{questionData.question}</p>
-        <button onClick={handleBefore} disabled={index === 0}>
-          Before
-        </button>
-        <button onClick={handleNext} disabled={index === quiz.length - 1}>
-          Next
-        </button>
 
         {/* <button>{questionData.choices[0]}</button>
         <button>{questionData.choices[1]}</button>
@@ -39,9 +25,16 @@ function App() {
         setIndex={setIndex}
         isCorrect={isCorrect}
         setCorrect={setCorrect}
+        elementVisible={elementVisible}
+        setElementVisible={setElementVisible}
       />
-        <Result />
-
+      <Result
+        isCorrect={isCorrect}
+        elementVisible={elementVisible}
+        setElementVisible={setElementVisible}
+        index={index}
+        setIndex={setIndex}
+      />
     </>
   );
 }

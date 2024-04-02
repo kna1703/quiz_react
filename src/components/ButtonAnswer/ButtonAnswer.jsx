@@ -3,7 +3,13 @@ import PropTypes from "prop-types";
 
 import { useState } from "react";
 
-function ButtonAnswer({ index, isCorrect, setCorrect }) {
+function ButtonAnswer({
+  index,
+  isCorrect,
+  setCorrect,
+  elementVisible,
+  setElementVisible,
+}) {
   const questionData = quiz[index];
 
   const handleChoice = (e) => {
@@ -14,6 +20,8 @@ function ButtonAnswer({ index, isCorrect, setCorrect }) {
     } else {
       console.log("coucou2");
     }
+    setElementVisible(true);
+    console.log(elementVisible);
   };
 
   return (
