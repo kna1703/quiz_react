@@ -12,9 +12,11 @@ function App() {
   const [isCorrect, setCorrect] = useState(false);
   const [elementVisible, setElementVisible] = useState(false);
   const questionData = quiz[index];
+  const [buttonsDisabled, setButtonsDisabled] = useState(false);
 
   return (
     <>
+    <Header />
       <Question index={index} setIndex={setIndex} />
 
       <Result />
@@ -33,6 +35,8 @@ function App() {
         setCorrect={setCorrect}
         elementVisible={elementVisible}
         setElementVisible={setElementVisible}
+        buttonsDisabled={buttonsDisabled}
+        setButtonsDisabled={setButtonsDisabled}
       />
       <Result
         isCorrect={isCorrect}
@@ -40,6 +44,8 @@ function App() {
         setElementVisible={setElementVisible}
         index={index}
         setIndex={setIndex}
+        buttonsDisabled={buttonsDisabled}
+        setButtonsDisabled={setButtonsDisabled}
       />
     </>
   );

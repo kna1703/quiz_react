@@ -10,6 +10,19 @@
 }
 
 :root {
+  --goodanswer: #00b41c;
+  --wronganswer: #fa87db;
+  --answer: #3585ce;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+button {
+  font-family: "PaytoneOne-Regular";
+  color: white;
   h1,
   h2,
   h3,
@@ -32,12 +45,8 @@ body {
 }
 
 .box {
-  border: solid;
+  border: white solid;
   padding: 8vh;
   border-radius: 1em;
   box-shadow: 0 0 45px rgba(255, 255, 255, 0.75);
-}
-
-button {
-  font-family: PaytoneOne-Regular;
 }

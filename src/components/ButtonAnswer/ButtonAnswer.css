@@ -9,12 +9,36 @@
 }
 
 .btn-answer {
-  border: solid 6px #3582ca;
+  border: solid 4px #3582ca;
   color: #ffff;
   background-color: transparent;
   font-size: 28px;
-  border-radius: 10px;
+  border-radius: 0.5em;
   text-decoration: none;
   width: 270px;
   height: 90px;
+  box-shadow: 0 0 45px rgba(53, 130, 202, 1);
+}
+
+.green {
+  border: solid 4px #00b41c;
+  box-shadow: 0 0 45px rgba(0, 180, 28, 1);
+}
+
+.red {
+  border: solid 4px #fa87db;
+  box-shadow: 0 0 45px rgba(250, 135, 219, 1);
+}
+
+@media only screen and (min-width: 430px) {
+  .btn-answer {
+    width: 150px;
+    height: 83px;
+    font-size: 0.9rem;
+  }
+  .bouton-grid {
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 100px 100px;
+    gap: 20px;
+  }
 }

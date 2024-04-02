@@ -9,10 +9,14 @@ function Result({
   setElementVisible,
   index,
   setIndex,
+  buttonsDisabled,
+  setButtonsDisabled,
 }) {
   console.log(isCorrect);
   let Visible = elementVisible;
   let className = "none";
+  const buttons = document.querySelectorAll(".btn-answer");
+  
   function visible() {
     Visible === true ? (className = "Result") : (className = "none");
   }
@@ -26,6 +30,10 @@ function Result({
   const handleNext = () => {
     setIndex(index + 1);
     setElementVisible(false);
+    setButtonsDisabled(false);
+    buttons.forEach((button) => {
+      button.classList.remove("green", "red");
+    })
   };
 
   //   const handleBefore = () => {
@@ -35,11 +43,11 @@ function Result({
   return (
     <div className={className}>
       {isCorrect === true ? (
-        <h3>
+        <h3 className="GoodFalse">
           <img className="goodCheck" src={checkdetour} /> Goode Answer{" "}
         </h3>
       ) : (
-        <h3>
+        <h3 className="GoodFalse">
           <img className="falseCheck" src={X} /> Tes null !{" "}
         </h3>
       )}
