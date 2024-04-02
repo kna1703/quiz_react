@@ -23,6 +23,16 @@ p,
 button {
   font-family: "PaytoneOne-Regular";
   color: white;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    font-family: "PaytoneOne-Regular";
+    color: white;
+    text-align: center;
+  }
 }
 
 body {

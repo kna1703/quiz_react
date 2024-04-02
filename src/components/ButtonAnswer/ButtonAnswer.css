@@ -30,3 +30,18 @@
   border: solid 4px #fa87db;
   box-shadow: 0 0 45px rgba(250, 135, 219, 1);
 }
+
+
+@media only screen and (max-width: 430px) {
+  .btn-answer {
+    width: 150px;
+    height: 83px;
+    font-size: 0.9rem;
+  }
+  .bouton-grid {
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 100px 100px;
+    gap: 20px;
+  }
+}
+

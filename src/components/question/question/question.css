@@ -3,8 +3,17 @@
   width: 50%;
   text-align: center;
   margin: 0 auto 0 auto;
+
 }
 
 h2 {
   font-size: 4vh;
 }
+
+
+@media only screen and (min-width: 430px) {
+  .box {
+    margin: 0 auto;
+  }
+}
+
