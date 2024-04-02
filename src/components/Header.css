@@ -16,7 +16,7 @@
 
   span {
     position: absolute;
-    z-index: auto;
+    z-index: auto; 
     right: 46%;
     top: 1%;
     transform:rotate(8deg);

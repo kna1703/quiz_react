@@ -9,20 +9,23 @@
 }
 
 .btn-answer {
-  border: solid 6px #3582ca;
+  border: solid 4px #3582ca;
   color: #ffff;
   background-color: transparent;
   font-size: 28px;
-  border-radius: 10px;
+  border-radius: 0.5em;
   text-decoration: none;
   width: 250px;
   height: 83px;
+  box-shadow: 0 0 45px rgba(53,130,202, 1);
 }
 
 .green {
-  border: solid 6px #00B41C;
+  border: solid 4px #00B41C;
+  box-shadow: 0 0 45px rgba(0,180,28, 1);
 }
 
 .red {
-  border: solid 6px #FA87DB;
+  border: solid 4px #FA87DB;
+  box-shadow: 0 0 45px rgba(250,135,219, 1);
 }

@@ -2,5 +2,9 @@
     border: solid white;
     width: 50%;
     text-align: center;
-    margin: auto;
+    margin: 5vh auto 8vh auto;
+}
+
+h2 {
+    font-size: 4vh;
 }
