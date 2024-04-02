@@ -16,7 +16,7 @@
   font-size: 28px;
   border-radius: 0.5em;
   text-decoration: none;
-  width: 250px;
+  width: 260px;
   height: 83px;
   box-shadow: 0 0 45px rgba(53, 130, 202, 1);
 }
@@ -31,7 +31,6 @@
   box-shadow: 0 0 45px rgba(250, 135, 219, 1);
 }
 
-
 @media only screen and (max-width: 430px) {
   .btn-answer {
     width: 150px;
@@ -44,4 +43,3 @@
     gap: 20px;
   }
 }
-
