@@ -2,13 +2,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
+} 
 
 .Quiz {
     font-size: 3vh;
     border: solid white;
     width: 20vh;
-    margin: 5vh;
     border-radius :1em;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.75);
     text-align: center;
@@ -16,14 +15,25 @@
 
   span {
     position: absolute;
-    z-index: auto;
-    right: 46%;
-    top: 1%;
+    right: 45%;
     transform:rotate(8deg);
     font-family: 'LondrinaShadow-Regular';
     font-size: 8vh;
     background-image: -webkit-linear-gradient(#3585CE, #FA87DB);
     -webkit-background-clip: text;
     color: transparent;
+} 
 
+
+@media only screen and (max-width: 430px) {
+  .Header {
+      width: auto;
+      margin: 0 auto;
+      width: 70%;
+  }
+
+  span {
+    position: absolute;
+    right: 33%;
+  }
 }
