@@ -1,9 +1,20 @@
+.bouton-grid {
+  display: grid;
+  grid-template-columns: 300px 300px;
+  grid-template-rows: 100px 100px;
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+
 .btn-answer {
   border: solid 6px #3582ca;
   color: #ffff;
-  font-size: 32px;
+  background-color: transparent;
+  font-size: 28px;
   border-radius: 10px;
   text-decoration: none;
-  width: 162px;
+  width: 250px;
   height: 83px;
 }
