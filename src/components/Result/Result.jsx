@@ -57,10 +57,15 @@ function Result({
           <img className="falseCheck" src={X} alt="cross" /> Wrong noob!{" "}
         </h3>
       )}
-
-      <button className="Next" onClick={handleNext}>
-        Next
-      </button>
+      {index + 1 === quiz.length ? (
+        <button className="Next" onClick={handleNext}>
+          Replay ?
+        </button>
+      ) : (
+        <button className="Next" onClick={handleNext}>
+          Next
+        </button>
+      )}
     </div>
   );
 }
