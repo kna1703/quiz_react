@@ -1,10 +1,10 @@
 .box {
-    border: solid white;
-    width: 50%;
-    text-align: center;
-    margin: 5vh auto 8vh auto;
+  border: solid white;
+  width: 50%;
+  text-align: center;
+  margin: 0 auto 0 auto;
 }
 
 h2 {
-    font-size: 4vh;
+  font-size: 4vh;
 }
