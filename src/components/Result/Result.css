@@ -30,8 +30,10 @@
   background-color: transparent;
   border-radius: 10px;
   color: white;
-  width: 5vw;
-  height: 5vh;
+  width: 7rem;
+  height: 2.5rem;
   font-size: 1.5rem;
   font-family: PaytoneOne-Regular;
+  line-height: 50%;
+  padding-bottom: 0.4rem;
 }
