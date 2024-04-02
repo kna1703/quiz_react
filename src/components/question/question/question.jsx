@@ -2,6 +2,7 @@ import { quiz } from "../../../question";
 import "./question.css";
 import { useState } from "react";
 
+
 function Question({index, setIndex}) {
     return (
         <>
