@@ -1,0 +1,27 @@
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.Quiz {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+    border: solid white;
+    width: 20vh;
+    margin: 10vh;
+    border-radius :1em;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.75);
+  }
+
+  span {
+    font-family: 'LondrinaShadow-Regular';
+    font-size: 8vh;
+    background-image: -webkit-linear-gradient(#3585CE, #FA87DB);
+    -webkit-background-clip: text;
+    color: transparent;
+
+}

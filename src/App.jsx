@@ -1,8 +1,11 @@
 import "./App.css";
 import { quiz } from "./question";
+import Header from "./components/Header";
 import ButtonAnswer from "./components/ButtonAnswer/ButtonAnswer";
 import { useState } from "react";
 import Result from "./components/Result/Result";
+
+import Question from "./components/question/question/question";
 
 function App() {
   const [index, setIndex] = useState(0);
@@ -20,6 +23,9 @@ function App() {
 
   return (
     <>
+      <Question index={index} setIndex={setIndex} />
+
+      <Result />
       <div>
         <p>{questionData.question}</p>
         <button onClick={handleBefore} disabled={index === 0}>
@@ -40,8 +46,7 @@ function App() {
         isCorrect={isCorrect}
         setCorrect={setCorrect}
       />
-        <Result />
-
+      <Result />
     </>
   );
 }
