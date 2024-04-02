@@ -10,19 +10,16 @@ function ButtonAnswer({
   setElementVisible,
   buttonsDisabled,
   setButtonsDisabled,
-  setScore, 
-  score
+  setScore,
+  score,
 }) {
   const questionData = quiz[index];
 
   const handleChoice = (e) => {
     if (questionData.correctAnswer === e.target.value) {
       setCorrect(true);
-
-      e.target.classList.add("green")
-      setScore(score +1)
-      
-
+      e.target.classList.add("green");
+      setScore(score + 1);
     } else {
       setCorrect(false);
       e.target.classList.add("red");
@@ -77,6 +74,13 @@ function ButtonAnswer({
 
 ButtonAnswer.propTypes = {
   index: PropTypes.number.isRequired,
+  isCorrect: PropTypes.bool.isRequired,
+  setCorrect: PropTypes.func.isRequired,
+  elementVisible: PropTypes.bool.isRequired,
+  setElementVisible: PropTypes.func.isRequired,
+  buttonsDisabled: PropTypes.bool.isRequired,
+  setButtonsDisabled: PropTypes.func.isRequired,
+  setScore: PropTypes.func.isRequired,
+  score: PropTypes.number.isRequired,
 };
-
 export default ButtonAnswer;
