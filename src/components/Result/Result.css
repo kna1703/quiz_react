@@ -1,0 +1,26 @@
+.Result {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.none {
+  display: none;
+}
+.goodCheck {
+  height: 2.5vh;
+  background-color: #00b41c;
+  border-radius: 100%;
+  padding: 2px;
+  margin-right: 2vw;
+}
+.falseCheck {
+  height: 2.5vh;
+  background-color: #fa87db;
+  border-radius: 100%;
+  padding: 2px;
+  margin-right: 2vw;
+}
+.Next {
+  border: #ffff solid;
+}
