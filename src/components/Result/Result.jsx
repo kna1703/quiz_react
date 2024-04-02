@@ -35,11 +35,11 @@ function Result({
   return (
     <div className={className}>
       {isCorrect === true ? (
-        <h3>
+        <h3 className="GoodFalse">
           <img className="goodCheck" src={checkdetour} /> Goode Answer{" "}
         </h3>
       ) : (
-        <h3>
+        <h3 className="GoodFalse">
           <img className="falseCheck" src={X} /> Tes null !{" "}
         </h3>
       )}
