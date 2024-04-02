@@ -19,7 +19,7 @@ function App() {
 
       <Result />
       <div>
-        <p>{questionData.question}</p>
+        {/* <p>{questionData.question}</p> */}
 
         {/* <button>{questionData.choices[0]}</button>
         <button>{questionData.choices[1]}</button>
@@ -41,7 +41,6 @@ function App() {
         index={index}
         setIndex={setIndex}
       />
-
     </>
   );
 }
