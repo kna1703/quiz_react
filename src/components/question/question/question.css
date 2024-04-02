@@ -10,7 +10,7 @@ h2 {
 }
 
 @media only screen and (max-width: 430px) {
-  .box {
+    .box {
     margin: 0 auto;
     width: 70%;
   }
@@ -19,3 +19,4 @@ h2 {
     font-size: 2vh;
   }
 }
+

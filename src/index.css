@@ -23,6 +23,7 @@ p,
 button {
   font-family: "PaytoneOne-Regular";
   color: white;
+
   h1,
   h2,
   h3,
@@ -35,9 +36,12 @@ button {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   min-width: 320px;
-  min-height: 100vh;
+  min-height: 80vh;
+  height: 82vh;
   background-image: url("assets/Image/background_image.jfif");
   background-repeat: no-repeat;
   background-color: black;
