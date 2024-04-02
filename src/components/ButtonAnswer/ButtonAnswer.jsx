@@ -1,17 +1,26 @@
 import { quiz } from "../../question";
 import PropTypes from "prop-types";
 import "./ButtonAnswer.css";
+import { useState } from "react";
+
 
 function ButtonAnswer({ index, isCorrect, setCorrect }) {
   const questionData = quiz[index];
+  const [couleur, setCouleur] = useState("btn-answer");
+
+
+
 
   const handleChoice = (e) => {
     //     console.log(indexButton);
     if (questionData.correctAnswer === e.target.value) {
       setCorrect(!isCorrect);
+      setCouleur("btn-answer green")
       console.log("coucou");
+      
     } else {
       console.log("coucou2");
+      setCouleur("btn-answer red")
     }
   };
 
@@ -20,7 +29,7 @@ function ButtonAnswer({ index, isCorrect, setCorrect }) {
       <button
         value={questionData.choices[0]}
         onClick={handleChoice}
-        className="btn-answer"
+        className={couleur}        
       >
         {" "}
         {questionData.choices[0]}{" "}
@@ -28,15 +37,16 @@ function ButtonAnswer({ index, isCorrect, setCorrect }) {
       <button
         value={questionData.choices[1]}
         onClick={handleChoice}
-        className="btn-answer"
+        className={couleur} 
       >
+        
         {" "}
         {questionData.choices[1]}
       </button>
       <button
         value={questionData.choices[2]}
         onClick={handleChoice}
-        className="btn-answer"
+        className={couleur} 
       >
         {" "}
         {questionData.choices[2]}
@@ -44,7 +54,7 @@ function ButtonAnswer({ index, isCorrect, setCorrect }) {
       <button
         value={questionData.choices[3]}
         onClick={handleChoice}
-        className="btn-answer"
+        className={couleur} 
       >
         {" "}
         {questionData.choices[3]}

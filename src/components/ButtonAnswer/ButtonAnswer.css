@@ -7,3 +7,11 @@
   width: 162px;
   height: 83px;
 }
+
+.green {
+  border: solid 6px green;
+}
+
+.red {
+  border: solid 6px red;
+}
