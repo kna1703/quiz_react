@@ -11,11 +11,15 @@
 }
 
 :root {
-h1, h2, h3, h4, p {
+--goodanswer:#00B41C;
+--wronganswer:#FA87DB;
+--answer:#3585CE;
+}
+
+h1, h2, h3, h4, p, button {
   font-family: 'PaytoneOne-Regular';
   color: white;
-  text-align: center;
-}}
+}
 
 body {
   margin: 0;
