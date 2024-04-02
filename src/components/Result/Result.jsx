@@ -11,6 +11,8 @@ function Result({
   setIndex,
   buttonsDisabled,
   setButtonsDisabled,
+  setScore, 
+  score,
 }) {
   console.log(quiz);
   // console.log(isCorrect);
@@ -58,9 +60,13 @@ function Result({
         </h3>
       )}
       {index + 1 === quiz.length ? (
+        <div>
+        <p>Score : {score} / {quiz.length}</p>
         <button className="Next" onClick={handleNext}>
           Replay ?
         </button>
+        </div>
+
       ) : (
         <button className="Next" onClick={handleNext}>
           Next

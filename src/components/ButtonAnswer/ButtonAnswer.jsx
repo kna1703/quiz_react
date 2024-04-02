@@ -12,6 +12,8 @@ function ButtonAnswer({
   setElementVisible,
   buttonsDisabled,
   setButtonsDisabled,
+  setScore, 
+  score
 }) {
   const questionData = quiz[index];
   
@@ -24,6 +26,7 @@ function ButtonAnswer({
     if (questionData.correctAnswer === e.target.value) {
       setCorrect(true);
       e.target.classList.add("green")
+      setScore(score +1)
       
     } else {
       setCorrect(false);
