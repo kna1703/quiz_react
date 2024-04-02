@@ -37,3 +37,7 @@
   line-height: 50%;
   padding-bottom: 0.4rem;
 }
+
+p {
+  text-align: center;
+}
