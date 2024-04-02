@@ -37,3 +37,7 @@ body {
   border-radius: 1em;
   box-shadow: 0 0 45px rgba(255, 255, 255, 0.75);
 }
+
+button {
+  font-family: PaytoneOne-Regular;
+}
