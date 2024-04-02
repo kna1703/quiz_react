@@ -2,18 +2,15 @@ import { quiz } from "../../question";
 import checkdetour from "./assets/checkdetour.png";
 import X from "./assets/X.png";
 import "./Result.css";
-// onClick={setIndex(index + 1)}
+import PropTypes from "prop-types";
 function Result({
   isCorrect,
   elementVisible,
   setElementVisible,
   index,
   setIndex,
-  buttonsDisabled,
   setButtonsDisabled,
 }) {
-  console.log(quiz);
-  // console.log(isCorrect);
   let Visible = elementVisible;
   let className = "none";
   const buttons = document.querySelectorAll(".btn-answer");
@@ -40,11 +37,6 @@ function Result({
       button.classList.remove("green", "red");
     });
   };
-
-  //   const handleBefore = () => {
-  //     setIndex((index) => index - 1);
-  //   };
-
   return (
     <div className={className}>
       {isCorrect === true ? (
@@ -59,7 +51,7 @@ function Result({
       )}
       {index + 1 === quiz.length ? (
         <button className="Next" onClick={handleNext}>
-          Replay ?
+          Replay
         </button>
       ) : (
         <button className="Next" onClick={handleNext}>
@@ -69,5 +61,13 @@ function Result({
     </div>
   );
 }
-
+Result.propTypes = {
+  isCorrect: PropTypes.bool.isRequired,
+  elementVisible: PropTypes.bool.isRequired,
+  setElementVisible: PropTypes.func.isRequired,
+  index: PropTypes.number.isRequired,
+  setIndex: PropTypes.func.isRequired,
+  buttonsDisabled: PropTypes.bool.isRequired,
+  setButtonsDisabled: PropTypes.func.isRequired,
+};
 export default Result;
