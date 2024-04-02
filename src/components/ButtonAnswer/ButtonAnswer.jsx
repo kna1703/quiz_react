@@ -6,7 +6,7 @@ import { useState } from "react";
 
 function ButtonAnswer({ index, isCorrect, setCorrect }) {
   const questionData = quiz[index];
-  const [couleur, setCouleur] = useState("btn-answer");
+  const [buttonsDisabled, setButtonsDisabled] = useState(false);
 
 
 
@@ -15,21 +15,23 @@ function ButtonAnswer({ index, isCorrect, setCorrect }) {
     //     console.log(indexButton);
     if (questionData.correctAnswer === e.target.value) {
       setCorrect(!isCorrect);
-      setCouleur("btn-answer green")
-      console.log("coucou");
+      e.target.classList.add("green")
       
     } else {
-      console.log("coucou2");
-      setCouleur("btn-answer red")
+      e.target.classList.add("red")
+  
     }
+    setButtonsDisabled(true)
   };
+
 
   return (
     <>
       <button
         value={questionData.choices[0]}
         onClick={handleChoice}
-        className={couleur}        
+        className={`btn-answer`}
+        disabled={buttonsDisabled}      
       >
         {" "}
         {questionData.choices[0]}{" "}
@@ -37,7 +39,8 @@ function ButtonAnswer({ index, isCorrect, setCorrect }) {
       <button
         value={questionData.choices[1]}
         onClick={handleChoice}
-        className={couleur} 
+        className={`btn-answer`}
+        disabled={buttonsDisabled}
       >
         
         {" "}
@@ -46,7 +49,8 @@ function ButtonAnswer({ index, isCorrect, setCorrect }) {
       <button
         value={questionData.choices[2]}
         onClick={handleChoice}
-        className={couleur} 
+        className={`btn-answer`}
+        disabled={buttonsDisabled}  
       >
         {" "}
         {questionData.choices[2]}
@@ -54,7 +58,8 @@ function ButtonAnswer({ index, isCorrect, setCorrect }) {
       <button
         value={questionData.choices[3]}
         onClick={handleChoice}
-        className={couleur} 
+        className={`btn-answer`} 
+        disabled={buttonsDisabled}  
       >
         {" "}
         {questionData.choices[3]}
