@@ -13,6 +13,7 @@ function App() {
   const [elementVisible, setElementVisible] = useState(false);
   const questionData = quiz[index];
   const [buttonsDisabled, setButtonsDisabled] = useState(false);
+  const [score, setScore] = useState(0);
 
   return (
     <>
@@ -37,6 +38,8 @@ function App() {
         setElementVisible={setElementVisible}
         buttonsDisabled={buttonsDisabled}
         setButtonsDisabled={setButtonsDisabled}
+        score={score}
+        setScore={setScore}
       />
       <Result
         isCorrect={isCorrect}
@@ -46,6 +49,8 @@ function App() {
         setIndex={setIndex}
         buttonsDisabled={buttonsDisabled}
         setButtonsDisabled={setButtonsDisabled}
+        score={score}
+        setScore={setScore}
       />
     </>
   );
