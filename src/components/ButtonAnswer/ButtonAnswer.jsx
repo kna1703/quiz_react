@@ -1,7 +1,6 @@
 import { quiz } from "../../question";
 import PropTypes from "prop-types";
-
-import { useState } from "react";
+import "./ButtonAnswer.css";
 
 function ButtonAnswer({ index, isCorrect, setCorrect }) {
   const questionData = quiz[index];
@@ -18,19 +17,35 @@ function ButtonAnswer({ index, isCorrect, setCorrect }) {
 
   return (
     <>
-      <button value={questionData.choices[0]} onClick={handleChoice}>
+      <button
+        value={questionData.choices[0]}
+        onClick={handleChoice}
+        className="btn-answer"
+      >
         {" "}
         {questionData.choices[0]}{" "}
       </button>
-      <button value={questionData.choices[1]} onClick={handleChoice}>
+      <button
+        value={questionData.choices[1]}
+        onClick={handleChoice}
+        className="btn-answer"
+      >
         {" "}
         {questionData.choices[1]}
       </button>
-      <button value={questionData.choices[2]} onClick={handleChoice}>
+      <button
+        value={questionData.choices[2]}
+        onClick={handleChoice}
+        className="btn-answer"
+      >
         {" "}
         {questionData.choices[2]}
       </button>
-      <button value={questionData.choices[3]} onClick={handleChoice}>
+      <button
+        value={questionData.choices[3]}
+        onClick={handleChoice}
+        className="btn-answer"
+      >
         {" "}
         {questionData.choices[3]}
       </button>
