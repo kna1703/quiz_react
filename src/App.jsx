@@ -2,6 +2,7 @@ import "./App.css";
 import { quiz } from "./question";
 import ButtonAnswer from "./components/ButtonAnswer/ButtonAnswer";
 import { useState } from "react";
+import Result from "./components/Result/Result";
 
 function App() {
   const [index, setIndex] = useState(0);
@@ -39,6 +40,8 @@ function App() {
         isCorrect={isCorrect}
         setCorrect={setCorrect}
       />
+        <Result />
+
     </>
   );
 }
