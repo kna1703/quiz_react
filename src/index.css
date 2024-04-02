@@ -1,13 +1,12 @@
 @font-face {
-  font-family: 'PaytoneOne-Regular';
-  src: url(assets/Fonts/Paytone_One/PaytoneOne-Regular.ttf)
-  format("truetype");
+  font-family: "PaytoneOne-Regular";
+  src: url(assets/Fonts/Paytone_One/PaytoneOne-Regular.ttf) format("truetype");
 }
 
 @font-face {
-  font-family: 'LondrinaShadow-Regular';
+  font-family: "LondrinaShadow-Regular";
   src: url(assets/Fonts/Londrina_Shadow/LondrinaShadow-Regular.ttf)
-  format("truetype");
+    format("truetype");
 }
 
 :root {
@@ -19,13 +18,14 @@
 h1, h2, h3, h4, p, button {
   font-family: 'PaytoneOne-Regular';
   color: white;
+
 }
 
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background-image: url('assets/Image/background_image.jfif');
+  background-image: url("assets/Image/background_image.jfif");
   background-repeat: no-repeat;
   background-color: black;
   background-position: center;
@@ -34,6 +34,7 @@ body {
 .box {
   border: solid;
   padding: 8vh;
-  border-radius :1em;
+  border-radius: 1em;
   box-shadow: 0 0 45px rgba(255, 255, 255, 0.75);
 }
+
