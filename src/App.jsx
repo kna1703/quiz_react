@@ -1,15 +1,38 @@
-import "./question";
-import { useState } from "react";
 import "./App.css";
 import { quiz } from "./question";
+import ButtonAnswer from "./components/ButtonAnswer/ButtonAnswer";
+import { useState } from "react";
 
 function App() {
-  // const [count, setCount] = useState(0);
+  const [index, setIndex] = useState(0);
+
+  const questionData = quiz[index];
+
+  const handleNext = () => {
+    setIndex((index) => index + 1);
+  };
+
+  const handleBefore = () => {
+    setIndex((index) => index - 1);
+  };
 
   return (
     <>
-      <h1>Popo</h1>
-      <p>{console.log(quiz)};</p>
+      <div>
+        <p>{questionData.question}</p>
+        <button onClick={handleBefore} disabled={index === 0}>
+          Before
+        </button>
+        <button onClick={handleNext} disabled={index === quiz.length - 1}>
+          Next
+        </button>
+
+        {/* <button>{questionData.choices[0]}</button>
+        <button>{questionData.choices[1]}</button>
+        <button>{questionData.choices[2]}</button>
+        <button>{questionData.choices[3]}</button> */}
+      </div>
+      <ButtonAnswer index={index} setIndex={setIndex} />
     </>
   );
 }
