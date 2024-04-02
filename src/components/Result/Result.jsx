@@ -30,6 +30,7 @@ function Result({
   const handleNext = () => {
     if (index + 1 === quiz.length) {
       setIndex(0);
+      setScore(0);
     } else {
       setIndex(index + 1);
     }
