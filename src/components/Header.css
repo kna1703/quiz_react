@@ -25,3 +25,9 @@ span {
   -webkit-background-clip: text;
   color: transparent;
 }
+
+@media only screen and (max-width: 430px) {
+  span {
+    right: 30%;
+  }
+}

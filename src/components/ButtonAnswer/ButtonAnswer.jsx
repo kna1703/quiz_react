@@ -1,8 +1,6 @@
 import { quiz } from "../../question";
 import PropTypes from "prop-types";
 import "./ButtonAnswer.css";
-import { useState } from "react";
-
 
 function ButtonAnswer({
   index,
@@ -16,28 +14,22 @@ function ButtonAnswer({
   score
 }) {
   const questionData = quiz[index];
-  
-
-
-
 
   const handleChoice = (e) => {
-    //     console.log(indexButton);
     if (questionData.correctAnswer === e.target.value) {
       setCorrect(true);
+
       e.target.classList.add("green")
       setScore(score +1)
       
+
     } else {
       setCorrect(false);
-      e.target.classList.add("red")
-  
+      e.target.classList.add("red");
     }
     setElementVisible(true);
-    console.log(elementVisible);
-    setButtonsDisabled(true)
+    setButtonsDisabled(true);
   };
-
 
   return (
     <>
@@ -46,7 +38,7 @@ function ButtonAnswer({
           value={questionData.choices[0]}
           onClick={handleChoice}
           className="btn-answer"
-          disabled={buttonsDisabled} 
+          disabled={buttonsDisabled}
         >
           {" "}
           {questionData.choices[0]}{" "}
@@ -55,7 +47,7 @@ function ButtonAnswer({
           value={questionData.choices[1]}
           onClick={handleChoice}
           className="btn-answer"
-          disabled={buttonsDisabled} 
+          disabled={buttonsDisabled}
         >
           {" "}
           {questionData.choices[1]}
@@ -64,7 +56,7 @@ function ButtonAnswer({
           value={questionData.choices[2]}
           onClick={handleChoice}
           className="btn-answer"
-          disabled={buttonsDisabled} 
+          disabled={buttonsDisabled}
         >
           {" "}
           {questionData.choices[2]}
@@ -73,7 +65,7 @@ function ButtonAnswer({
           value={questionData.choices[3]}
           onClick={handleChoice}
           className="btn-answer"
-          disabled={buttonsDisabled} 
+          disabled={buttonsDisabled}
         >
           {" "}
           {questionData.choices[3]}
@@ -88,16 +80,3 @@ ButtonAnswer.propTypes = {
 };
 
 export default ButtonAnswer;
-
-{
-  /* {questionData.choices.map((button, indexButton) => (
-        <Button
-          key={indexButton}
-          button={button}
-          onClick={() => handleChoice(indexButton)}
-          className="btn"
-        >
-          {button}/
-        </Button>
-      ))} */
-}
