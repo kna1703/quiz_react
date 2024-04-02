@@ -1,12 +1,13 @@
-import { useState } from "react";
+// import { useState } from "react";
 import "./App.css";
+import Result from "./components/Result/Result";
 
 function App() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
 
   return (
     <>
-      <h1>Popo</h1>
+      <Result />
     </>
   );
 }
