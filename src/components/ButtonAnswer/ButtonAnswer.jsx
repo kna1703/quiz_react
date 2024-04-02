@@ -10,9 +10,11 @@ function ButtonAnswer({
   setCorrect,
   elementVisible,
   setElementVisible,
+  buttonsDisabled,
+  setButtonsDisabled,
 }) {
   const questionData = quiz[index];
-  const [buttonsDisabled, setButtonsDisabled] = useState(false);
+  
 
 
 
@@ -20,10 +22,11 @@ function ButtonAnswer({
   const handleChoice = (e) => {
     //     console.log(indexButton);
     if (questionData.correctAnswer === e.target.value) {
-      setCorrect(!isCorrect);
+      setCorrect(true);
       e.target.classList.add("green")
       
     } else {
+      setCorrect(false);
       e.target.classList.add("red")
   
     }
