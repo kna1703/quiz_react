@@ -34,6 +34,9 @@ button {
     text-align: center;
   }
 }
+.score {
+  margin: 0 auto;
+}
 
 body {
   display: flex;
