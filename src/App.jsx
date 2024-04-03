@@ -15,6 +15,7 @@ function App() {
     <>
       <Header />
       <Question index={index} setIndex={setIndex} />
+
       <ButtonAnswer
         index={index}
         setIndex={setIndex}
