@@ -4,9 +4,7 @@ import "./ButtonAnswer.css";
 
 function ButtonAnswer({
   index,
-  isCorrect,
   setCorrect,
-  elementVisible,
   setElementVisible,
   buttonsDisabled,
   setButtonsDisabled,

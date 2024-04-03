@@ -10,7 +10,7 @@ function Result({
   index,
   setIndex,
   setButtonsDisabled,
-  setScore, 
+  setScore,
   score,
 }) {
   let Visible = elementVisible;
@@ -54,12 +54,13 @@ function Result({
       )}
       {index + 1 === quiz.length ? (
         <div>
-        <p>Score : {score} / {quiz.length}</p>
-        <button className="Next" onClick={handleNext}>
-          Replay
-        </button>
+          <p className="score">
+            Score : {score} / {quiz.length}
+          </p>
+          <button className="Next" onClick={handleNext}>
+            Replay
+          </button>
         </div>
-
       ) : (
         <button className="Next" onClick={handleNext}>
           Next

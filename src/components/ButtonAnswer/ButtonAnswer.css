@@ -31,15 +31,15 @@
   box-shadow: 0 0 45px rgba(250, 135, 219, 1);
 }
 
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 580px) {
   .btn-answer {
-    width: 150px;
-    height: 83px;
-    font-size: 0.9rem;
+    width: 180px;
+    height: 80px;
+    font-size: 1.15rem;
   }
   .bouton-grid {
     grid-template-columns: 200px 200px;
     grid-template-rows: 100px 100px;
-    gap: 20px;
+    /* gap: 0.5rem; */
   }
 }
