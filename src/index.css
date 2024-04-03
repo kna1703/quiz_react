@@ -10,21 +10,38 @@
 }
 
 :root {
---goodanswer:#00B41C;
---wronganswer:#FA87DB;
---answer:#3585CE;
+  --goodanswer: #00b41c;
+  --wronganswer: #fa87db;
+  --answer: #3585ce;
 }
 
-h1, h2, h3, h4, p, button {
-  font-family: 'PaytoneOne-Regular';
+h1,
+h2,
+h3,
+h4,
+p,
+button {
+  font-family: "PaytoneOne-Regular";
   color: white;
 
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    font-family: "PaytoneOne-Regular";
+    color: white;
+    text-align: center;
+  }
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   min-width: 320px;
-  min-height: 100vh;
+  min-height: 80vh;
+  height: 82vh;
   background-image: url("assets/Image/background_image.jfif");
   background-repeat: no-repeat;
   background-color: black;
@@ -32,9 +49,8 @@ body {
 }
 
 .box {
-  border: solid;
-  padding: 8vh;
+  border: white solid;
+  padding: 5vh;
   border-radius: 1em;
   box-shadow: 0 0 45px rgba(255, 255, 255, 0.75);
 }
-

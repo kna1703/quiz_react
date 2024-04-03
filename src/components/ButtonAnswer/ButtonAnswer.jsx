@@ -8,19 +8,24 @@ function ButtonAnswer({
   setCorrect,
   elementVisible,
   setElementVisible,
+  buttonsDisabled,
+  setButtonsDisabled,
+  setScore,
+  score,
 }) {
   const questionData = quiz[index];
 
   const handleChoice = (e) => {
-    //     console.log(indexButton);
     if (questionData.correctAnswer === e.target.value) {
-      setCorrect(!isCorrect);
-      console.log("coucou");
+      setCorrect(true);
+      e.target.classList.add("green");
+      setScore(score + 1);
     } else {
-      console.log("coucou2");
+      setCorrect(false);
+      e.target.classList.add("red");
     }
     setElementVisible(true);
-    console.log(elementVisible);
+    setButtonsDisabled(true);
   };
 
   return (
@@ -30,6 +35,7 @@ function ButtonAnswer({
           value={questionData.choices[0]}
           onClick={handleChoice}
           className="btn-answer"
+          disabled={buttonsDisabled}
         >
           {" "}
           {questionData.choices[0]}{" "}
@@ -38,6 +44,7 @@ function ButtonAnswer({
           value={questionData.choices[1]}
           onClick={handleChoice}
           className="btn-answer"
+          disabled={buttonsDisabled}
         >
           {" "}
           {questionData.choices[1]}
@@ -46,6 +53,7 @@ function ButtonAnswer({
           value={questionData.choices[2]}
           onClick={handleChoice}
           className="btn-answer"
+          disabled={buttonsDisabled}
         >
           {" "}
           {questionData.choices[2]}
@@ -54,6 +62,7 @@ function ButtonAnswer({
           value={questionData.choices[3]}
           onClick={handleChoice}
           className="btn-answer"
+          disabled={buttonsDisabled}
         >
           {" "}
           {questionData.choices[3]}
@@ -65,19 +74,13 @@ function ButtonAnswer({
 
 ButtonAnswer.propTypes = {
   index: PropTypes.number.isRequired,
+  isCorrect: PropTypes.bool.isRequired,
+  setCorrect: PropTypes.func.isRequired,
+  elementVisible: PropTypes.bool.isRequired,
+  setElementVisible: PropTypes.func.isRequired,
+  buttonsDisabled: PropTypes.bool.isRequired,
+  setButtonsDisabled: PropTypes.func.isRequired,
+  setScore: PropTypes.func.isRequired,
+  score: PropTypes.number.isRequired,
 };
-
 export default ButtonAnswer;
-
-{
-  /* {questionData.choices.map((button, indexButton) => (
-        <Button
-          key={indexButton}
-          button={button}
-          onClick={() => handleChoice(indexButton)}
-          className="btn"
-        >
-          {button}/
-        </Button>
-      ))} */
-}
