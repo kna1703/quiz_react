@@ -35,8 +35,7 @@ function ButtonAnswer({
           className="btn-answer"
           disabled={buttonsDisabled}
         >
-          {" "}
-          {questionData.choices[0]}{" "}
+          {questionData.choices[0]}
         </button>
         <button
           value={questionData.choices[1]}
@@ -44,7 +43,6 @@ function ButtonAnswer({
           className="btn-answer"
           disabled={buttonsDisabled}
         >
-          {" "}
           {questionData.choices[1]}
         </button>
         <button
@@ -53,7 +51,6 @@ function ButtonAnswer({
           className="btn-answer"
           disabled={buttonsDisabled}
         >
-          {" "}
           {questionData.choices[2]}
         </button>
         <button
@@ -62,7 +59,6 @@ function ButtonAnswer({
           className="btn-answer"
           disabled={buttonsDisabled}
         >
-          {" "}
           {questionData.choices[3]}
         </button>
       </div>
@@ -81,4 +77,5 @@ ButtonAnswer.propTypes = {
   setScore: PropTypes.func.isRequired,
   score: PropTypes.number.isRequired,
 };
+
 export default ButtonAnswer;

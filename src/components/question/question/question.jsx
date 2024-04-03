@@ -1,7 +1,7 @@
 import { quiz } from "../../../question";
 import "./question.css";
-
-function Question({ index, setIndex }) {
+import PropTypes from "prop-types";
+function Question({ index }) {
   return (
     <>
       <div className="box">
@@ -12,3 +12,7 @@ function Question({ index, setIndex }) {
 }
 
 export default Question;
+
+Question.propTypes = {
+  index: PropTypes.number.isRequired,
+};

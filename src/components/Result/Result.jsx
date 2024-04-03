@@ -77,5 +77,7 @@ Result.propTypes = {
   setIndex: PropTypes.func.isRequired,
   buttonsDisabled: PropTypes.bool.isRequired,
   setButtonsDisabled: PropTypes.func.isRequired,
+  setScore: PropTypes.number.isRequired,
+  score: PropTypes.number.isRequired,
 };
 export default Result;
